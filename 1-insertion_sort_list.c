@@ -11,6 +11,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *first_node, *temp, *trav;
 
+	if (list == NULL || *list == NULL || (*list)->next == NULL)
+		return;
+
 	first_node = *list;
 	trav = first_node->next;
 	while (trav)
